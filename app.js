@@ -18,9 +18,7 @@ async function onMovieSelect(movie, target, side) {
   }
 
   if (leftMovie && rightMovie) {
-    const compareBtn = document.querySelector(".compare");
-    compareBtn.classList.add("show");
-    compareBtn.addEventListener("click", runComparison);
+    runComparison();
   }
 }
 
@@ -74,8 +72,7 @@ const addMovie = (movie) => {
         <div class="rating">
           <div data-value=${imdb} class="rating-content stat">
             <p>IMDB</p>
-            <h6 class="title-detail">(${movie.imdbVotes} Votes)</h6>
-            <h4 class="title-detail">${movie.Ratings[0].Value}</h4>
+            <h4>${movie.Ratings[0].Value}</h4>
           </div>
           <div data-value=${rottenTomatos} class="rating-content stat">
             <p>${movie.Ratings[1].Source}</p>
