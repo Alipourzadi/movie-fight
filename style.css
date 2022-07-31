@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Gruppo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0c17;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.title {
+  font-family: "Gruppo", cursive;
+  color: #f4f4f4;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: absolute;
+  top: 8rem;
+  width: 100%;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family: "Kanit", sans-serif;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: 5px -5px 16px #050509, -5px 5px 16px #151325;
+  background: #0d0c17;
+  color: #f4f4f4;
+  padding: 1rem;
+  margin: 2rem 3rem;
+}
+
+.notif {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+
+  background: linear-gradient(145deg, #0e0d19, #0c0b15);
+  box-shadow: 5px 5px 10px #050509, -5px -5px 10px #151325;
+  color: #f4f4f4;
+  padding: 1.75rem;
+  position: absolute;
+  top: 55%;
+}
+
+.notif-title {
+  margin: 0;
+}
+
+.notif-subtitle {
+  margin: 0.2rem;
+  font-size: 0.9rem;
+}
+
+.card {
+  display: none;
+  flex-direction: column;
+  width: 80%;
+  height: 350px;
+  border-radius: 0.3rem;
+  margin-top: 0.5rem;
+  overflow: auto;
+  border-radius: 0.5rem;
+  background: linear-gradient(45deg, #0c0b15, #0e0d19);
+  box-shadow: 6px -6px 12px #050509, -6px 6px 12px #151325;
+  transform: translate(13%, -10%);
+}
+
+.card::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: none;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.card::-webkit-scrollbar {
+  width: 2px;
+  height: 20px;
+  border-radius: 1rem;
+  transform: translateX(20px);
+  background-color: #f4f4f4;
+}
+
+.card::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #0c1755;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kanit", sans-serif;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+.card-items img {
+  width: 75px;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.card-items:hover {
+  background-color: #1f384418;
+  transition: 0.5s;
+}
+
+.option {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  width: 100%;
+  font-size: 0.8rem;
+  color: #f4f4f4;
+}
+
+#l-autocomplete,
+#r-autocomplete {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.main-content {
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 1rem;
+  padding: 0rem 0.75rem;
+  border-radius: 25px;
+  background: #0d0c17;
+  box-shadow: 22px -22px 57px #07060c, -22px 22px 57px #131222;
+  color: #f4f4f4;
+  border-radius: 0.5rem;
+  transform: translate(-5%, -4%);
+}
+
+.detail-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  margin-bottom: 0.2rem;
+  border-radius: 35px;
+  background: none;
+  border-radius: 0.5rem;
+}
+
+.detail-content img {
+  width: 45%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+.plot-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.75rem;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+#title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  text-align: center;
+}
+
+.title-detail {
+  margin: 0;
+  text-align: center;
+}
+
+.detail-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  margin: 0.2rem 1rem;
+  padding: 0.5rem 1rem;
+  background: #0d0c17;
+  box-shadow: 2px 2px 2px #07060c, 5px 6px 100px #050509;
+  border-radius: 0.5rem;
+}
+
+.detail-box * {
+  margin: 0;
+}
+
+.detail-box:last-child {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: flex-end;
+  align-content: center;
+  grid-template-rows: 85px;
+  column-gap: 0.2rem;
+  width: 100%;
+}
+
+.rating-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: center;
+  border-radius: 0.5rem;
+  background: #0d0c17;
+  box-shadow: 2px 2px 2px #07060c, 5px 6px 100px #050509;
+  font-size: 0.8rem;
+}
+
+.gdat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  font-weight: 700;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.icon {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.75rem;
+  color: #f4f4f4;
+}
+
+.icon:hover {
+  color: #999;
+  transition: 1s;
+}
+
+.is-better {
+  background: #03143a;
+}
+
+.compare {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  outline: none;
+  color: #999;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: absolute;
+  transform: translate(-7%,300%);
+}
+
+.compare p{
+  font-size: 1rem;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 0.1rem;
+}
+
+.compare:hover {
+  color: #f4f4f4;
+  font-size: 3rem;
+  transition: 0.3s;
+}
+
+.show {
+  display: flex;
+}
